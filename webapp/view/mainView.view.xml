@@ -1,0 +1,43 @@
+<mvc:View
+    controllerName="com.mindset.apps.project2.controller.mainView"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+        >
+          <VBox id = "vboxId1" alignItems="Stretch">
+            <TextArea
+                id="inputBox"
+                placeholder="Enter text here..."
+                rows="5"
+                width="100%"
+            />
+
+            <VBox id = "vboxId2" alignItems="Center" width="100%">
+              <HBox id = "hboxId" width="100%">
+                <Button
+                    id = "buttonId1"
+                    text="Tree1"
+                    press="onTree1Press"
+                    width="100%"
+                />
+
+                <Button
+                    id = "buttonId2"
+                    text="Tree2"
+                    press="onTree2Press"
+                    width="100%"
+                />
+              </HBox>
+            </VBox>
+            <Tree
+                id="Tree"
+                items="{path: '/'}">
+              <StandardTreeItem title="{text}"/>
+            </Tree>
+          </VBox>
+    </Page>
+</mvc:View>
